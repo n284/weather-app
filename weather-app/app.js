@@ -10,8 +10,8 @@ window.addEventListener("load", () => {
         this.navigator.geolocation.getCurrentPosition(position => {
             lon = position.coords.longitude;
             lat = position.coords.latitude;
-            lon = 140.7311871;
-            lat = 39.0192127;
+            lon = 139.688;
+            lat = 35.6213;
 
             const API_KEY = "360a9abe01d23bae800998614820c40b"
             const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=ja`;
@@ -54,7 +54,11 @@ window.addEventListener("load", () => {
                     currentIcon = "CLEAR_DAY";
                     break;
 
-                case "02d", "03d"://晴れ
+                case "02d"://晴れ
+                    currentIcon = "PARTLY_CLOUDY_DAY";
+                    break;
+                
+                case "03d"://晴れ
                     currentIcon = "PARTLY_CLOUDY_DAY";
                     break;
 
@@ -110,7 +114,10 @@ window.addEventListener("load", () => {
                     currentIcon = "CLEAR_NIGHT";
                     break;
 
-                case "02n", "03n"://晴れ
+                case "02n"://晴れ
+                    currentIcon = "PARTLY_CLOUDY_NIGHT";
+                    break;
+                case "03n"://晴れ
                     currentIcon = "PARTLY_CLOUDY_NIGHT";
                     break;
 
