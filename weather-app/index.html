@@ -9,17 +9,49 @@
     </head>
 
     <body>
-        <div class="location">
-            <h1 class="location-timezone">Timezone</h1>
-            <canvas class="weather-icon" width="128" height="128"></canvas>
+        <div id="header">
+            <h1 id="location-name">name</h1>
+            <canvas id="weather-icon" width="128" height="128">icon</canvas>
+        </div>
+        <div id="weather-description">
+            <div id="temperature-description">temperature description</div>
         </div>
 
-        <div class="temperature">
-            <div class="degree-section">
-                <h2 class="temperature-degree">34</h2>
+        <div id="temperature">
+            <h2 id="temperature-degree">temperature</h2>
+            <div id="min-max-temparature">
+                <p id="min">min</p>
+                <p id="max">max</p>
             </div>
-            
-            <div class="temperature-description">Its friggin cold.</div>
+        </div>
+
+        <div id="property">
+            <table id="weather-property">
+                <tr>
+                    <th class="property-name">湿度</th>
+                    <td class="property-value">humidity %</td>
+                </tr>
+                <tr>
+                    <th class="property-name">気圧</th>
+                    <td class="property-value">pressure hpa</td>
+                </tr>
+                <tr>
+                    <th class="property-name" id="rain-snow">降水量</th>
+                    <td class="property-value">rain m</td>
+                </tr>
+                <tr>
+                    <th class="property-name">風速</th>
+                    <td class="property-value">deg wind m/s</td>
+                </tr>
+                <tr>
+                    <th class="property-name">雲</th>
+                    <td class="property-value">cloudy %</td>
+                </tr>
+                <tr>
+                    <th class="property-name">日の出入</th>
+                    <td class="property-value">sunrise - sunset</td>
+                </tr>
+            </table>
         </div>
 
 

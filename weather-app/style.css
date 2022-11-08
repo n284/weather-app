@@ -15,31 +15,51 @@ body {
     color: white;
 }
 
-
-
-.location, .temperature {
-    height: 30vh;
-    width: 50%;
+#header{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: row;
 }
 
-.temperature {
+#weather-description{
+    font-size: 16px;
+}
+
+#temperature{
+    display: flex;
     flex-direction: column;
 }
 
-.degree-section { 
+#min-max-temparature{
     display: flex;
-    align-items: center;
-    cursor: pointer;
+    flex-direction: row;
+    justify-content: center;
+}
+#min-max-temparature p{
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-.degree-section span {
-    margin: 10px;
-    font-size: 30px;
+#property{
+    margin-top: 20px;
+}
+#weather-property{
+    display: flex;
+    flex-direction: column;
+}
+/* #property tr{
+    display: flex;
+    flex-direction: row;
 }
 
-.degree-section h2 {
-    font-size: 40px;
+#property th{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 16px;
 }
+
+#property td{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+} */

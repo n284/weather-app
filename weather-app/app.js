@@ -1,17 +1,18 @@
 window.addEventListener("load", () => {
     let lon;
     let lat;
-    let temperatureDescription = this.document.querySelector(".temperature-description");
-    let temperatureDegree = this.document.querySelector(".temperature-degree");
-    let locationTimezone = this.document.querySelector(".location-timezone");
-    let wetherIcon = this.document.querySelector(".weather-icon");
+    let temperatureDescription = this.document.querySelector("#temperature-description");
+    let temperatureDegree = this.document.querySelector("#temperature-degree");
+    let locationTimezone = this.document.querySelector("#location-timezone");
+    let wetherIcon = this.document.querySelector("#weather-icon");
 
     if (this.navigator.geolocation) {
         this.navigator.geolocation.getCurrentPosition(position => {
             lon = position.coords.longitude;
             lat = position.coords.latitude;
-            lon = 139.688;
-            lat = 35.6213;
+            // デバッグ用
+            lon = 140.165;
+            lat = 38.508;
 
             const API_KEY = "360a9abe01d23bae800998614820c40b"
             const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=ja`;
@@ -32,7 +33,7 @@ window.addEventListener("load", () => {
                 //Set DOM Elements from the API
                 temperatureDegree.textContent = temperature;
                 temperatureDescription.textContent = summary;
-                locationTimezone.textContent = data.timezone;
+
 
                 //setIcon
                 setIcons(icon, wetherIcon, weatherID);
@@ -54,11 +55,7 @@ window.addEventListener("load", () => {
                     currentIcon = "CLEAR_DAY";
                     break;
 
-                case "02d"://晴れ
-                    currentIcon = "PARTLY_CLOUDY_DAY";
-                    break;
-                
-                case "03d"://晴れ
+                case "02d", "03d"://晴れ
                     currentIcon = "PARTLY_CLOUDY_DAY";
                     break;
 
@@ -114,10 +111,7 @@ window.addEventListener("load", () => {
                     currentIcon = "CLEAR_NIGHT";
                     break;
 
-                case "02n"://晴れ
-                    currentIcon = "PARTLY_CLOUDY_NIGHT";
-                    break;
-                case "03n"://晴れ
+                case "02n", "03n"://晴れ
                     currentIcon = "PARTLY_CLOUDY_NIGHT";
                     break;
 
