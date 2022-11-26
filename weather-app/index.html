@@ -4,7 +4,7 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta http_equiv="X-UA-Compatible" content="ie=edge"/>
-        <link rel="stylesheet" href="./style.css"/>
+        <link rel="stylesheet" href="./static/css/style.css"/>
         <title>Weather</title>
     </head>
 
@@ -15,10 +15,22 @@
         </div>
 
         <div id="temperature">
-            <h2 id="temperature_degree">temperature</h2>
+            <div id="now_temperature">
+                <h2 id="now_temperature_degree">temperature</h2>
+                <p id="now_temperature_unit">℃</p>
+            </div>
+            
             <div id="min_max_temperature">
-                <p id="min_temperature">min</p>
-                <p id="max_temperature">max</p>
+                <div id="max_temperature">
+                    <p id="max_temperature_label">最高気温</p>
+                    <p id="max_temperature_degree">max</p>
+                    <p id="max_temperature_unit">℃</p>
+                </div>
+                <div id="min_temperature">
+                    <p id="min_temperature_label">最低気温</p>
+                    <p id="min_temperature_degree">min</p>
+                    <p id="min_temperature_unit">℃</p>
+                </div>
             </div>
         </div>
         
@@ -30,33 +42,50 @@
             <table id="weather_property">
                 <tr>
                     <th id="label_humidity" class="property_name">湿度</th>
-                    <td id="data_humidity" class="property_value">humidity %</td>
+                    <td id="data_humidity" class="property_value">
+                        <p class="value">humidity</p>
+                        <p class="unit">%</p>
+                    </td>
                 </tr>
                 <tr>
                     <th id="label_pressure" class="property_name">気圧</th>
-                    <td id="data_pressure" class="property_value">pressure hpa</td>
+                    <td id="data_pressure" class="property_value">
+                        <p class="value">pressure</p>
+                        <p class="unit">hpa</p> 
+                    </td>
                 </tr>
                 <tr>
                     <th id="label_rainfall_snowfall" class="property_name">降水量</th>
-                    <td id="data_rainfall_snowfall" class="property_value">rain m</td>
+                    <td id="data_rainfall_snowfall" class="property_value">
+                        <p class="value">rain</p> 
+                        <p class="unit">m</p>
+                    </td>
                 </tr>
                 <tr>
                     <th id="label_wind" class="property_name">風速</th>
-                    <td id="data_wind" class="property_value">deg wind m/s</td>
+                    <td id="data_wind" class="property_value">
+                        <p class="value">deg wind</p>
+                        <p class="unit">m/s</p>
+                    </td>
                 </tr>
                 <tr>
                     <th id="label_cloudy" class="property_name">雲</th>
-                    <td id="data_cloudy" class="property_value">cloudy %</td>
+                    <td id="data_cloudy" class="property_value">
+                        <p class="value">cloudy</p>
+                        <p class="unit">%</p>
+                    </td>
                 </tr>
                 <tr>
                     <th id="label_sunrise_sunset" class="property_name">日の出入</th>
-                    <td id="data_sunrise_sunset" class="property_value">sunrise - sunset</td>
+                    <td id="data_sunrise_sunset" class="property_value">
+                        <p class="value">sunrise - sunset</p>
+                    </td>
                 </tr>
             </table>
         </div>
 
-
-        <script type="text/javascript" src="./skycons.js" ></script>
-        <script type="text/javascript" src="./app.js" ></script>
+        <script type="text/javascript" src="./static/js/muni.js" ></script>
+        <script type="text/javascript" src="./static/js/skycons.js" ></script>
+        <!-- <script type="text/javascript" src="./static/js/app.js" ></script> -->
     </body>
 </html>
