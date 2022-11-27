@@ -10,82 +10,89 @@
 
     <body>
         <div id="header">
-            <h1 id="location_name">name</h1>
-            <canvas id="weather_icon" width="128" height="128">icon</canvas>
+            <img id="reload_icon" width="32" height="32" src="./static/img/reload-icon.png">
+            <h1 id="location_name">?</h1>
+            <canvas id="weather_icon" width="128" height="128">?</canvas>
+            
         </div>
 
         <div id="temperature">
             <div id="now_temperature">
-                <h2 id="now_temperature_degree">temperature</h2>
+                <h2 id="now_temperature_degree">?</h2>
                 <p id="now_temperature_unit">℃</p>
             </div>
             
             <div id="min_max_temperature">
                 <div id="max_temperature">
-                    <p id="max_temperature_label">最高気温</p>
-                    <p id="max_temperature_degree">max</p>
+                    <p id="max_temperature_label">最高</p>
+                    <p id="max_temperature_degree">?</p>
                     <p id="max_temperature_unit">℃</p>
                 </div>
                 <div id="min_temperature">
-                    <p id="min_temperature_label">最低気温</p>
-                    <p id="min_temperature_degree">min</p>
+                    <p id="min_temperature_label">最低</p>
+                    <p id="min_temperature_degree">?</p>
                     <p id="min_temperature_unit">℃</p>
                 </div>
             </div>
         </div>
         
         <div id="description">
-            <h2 id="weather_description">temperature description</h2>
+            <h2 id="weather_description">?</h2>
         </div>
 
         <div id="property">
             <table id="weather_property">
-                <tr>
+                <tr id="table_top">
                     <th id="label_humidity" class="property_name">湿度</th>
-                    <td id="data_humidity" class="property_value">
-                        <p class="value">humidity</p>
+                    <td class="property_value">
+                        <p id="data_humidity" class="value">?</p>
                         <p class="unit">%</p>
                     </td>
                 </tr>
                 <tr>
                     <th id="label_pressure" class="property_name">気圧</th>
-                    <td id="data_pressure" class="property_value">
-                        <p class="value">pressure</p>
+                    <td class="property_value">
+                        <p id="data_pressure" class="value">?</p>
                         <p class="unit">hpa</p> 
                     </td>
                 </tr>
                 <tr>
                     <th id="label_rainfall_snowfall" class="property_name">降水量</th>
-                    <td id="data_rainfall_snowfall" class="property_value">
-                        <p class="value">rain</p> 
-                        <p class="unit">m</p>
+                    <td class="property_value">
+                        <p id="data_rainfall_snowfall" class="value">?</p> 
+                        <p class="unit">mm/h</p>
                     </td>
                 </tr>
                 <tr>
                     <th id="label_wind" class="property_name">風速</th>
-                    <td id="data_wind" class="property_value">
-                        <p class="value">deg wind</p>
+                    <td class="property_value">
+                        <p id="data_wind" class="value">?</p>
                         <p class="unit">m/s</p>
                     </td>
                 </tr>
                 <tr>
                     <th id="label_cloudy" class="property_name">雲</th>
-                    <td id="data_cloudy" class="property_value">
-                        <p class="value">cloudy</p>
+                    <td class="property_value">
+                        <p id="data_cloudy" class="value">?</p>
                         <p class="unit">%</p>
                     </td>
                 </tr>
-                <tr>
+                <tr id="table_bottom">
                     <th id="label_sunrise_sunset" class="property_name">日の出入</th>
-                    <td id="data_sunrise_sunset" class="property_value">
-                        <p class="value">sunrise - sunset</p>
+                    <td class="property_value">
+                        <p id="data_sunrise_sunset" class="value">?</p>
                     </td>
                 </tr>
             </table>
         </div>
 
+        <!--スクリプト-->
+        <!--使用されるスクリプトを先に書く-->
         <script type="text/javascript" src="./static/js/muni.js" ></script>
         <script type="text/javascript" src="./static/js/skycons.js" ></script>
-        <!-- <script type="text/javascript" src="./static/js/app.js" ></script> -->
+        <script type="text/javascript" src="./static/js/app.js" ></script>
     </body>
 </html>
+
+<!--引用-->
+<!--https://www.freeiconspng.com/downloadimg/16913-->
